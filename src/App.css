@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  background: #222;
+  color: #e6b800;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Code Editor Panel */
+.editor {
+  display: flex;
+  flex-direction: column;
+  background: #2d2a26;
+  border-right: 3px solid #e6b800;
+  padding: 10px;
+}
+
+/* Line Numbering & Text Area Wrapper */
+.editor-container {
+  display: flex;
+  flex-grow: 1;
+  background: #1e1b18;
+  border: 2px solid #e6b800;
+  overflow: hidden;
+  align-items: stretch; /* Ensures both children stretch equally */
+}
+
+/* Line Number Section */
+.line-numbers {
+  width: 50px;
+  text-align: right;
+  padding-right: 5px;
+  color: #b39250;
+  background: #26221d;
+  border-right: 2px solid #e6b800;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.line-number {
+  height: 20px; /* Exact match to textarea line height */
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 5px;
+  user-select: none;
+}
+
+/* Text Area */
+.text-area {
+  flex-grow: 1;
+  background: #1e1b18;
+  color: #e6b800;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  padding: 0; /* Remove padding that might be pushing text down */
+  border: none;
+  outline: none;
+  resize: none;
+  line-height: 20px; /* Exact match to line numbers */
+  height: 100%;
+  overflow: auto;
+  margin: 0;
+}
+
+/* Run Button */
+.run-btn {
+  background: #b39250;
+  color: #222;
+  border: 2px solid #e6b800;
+  padding: 8px;
+  margin-top: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.run-btn:hover {
+  background: #e6b800;
+  color: black;
+}
+
+/* Divider */
+.divider {
+  width: 5px;
+  cursor: ew-resize;
+  background: #e6b800;
+  transition: background 0.2s;
+}
+
+.divider:hover {
+  background: #b39250;
+}
+
+/* Terminal Panel */
+.terminal {
+  background: #1e1b18;
+  color: #e6b800;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  padding: 10px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
